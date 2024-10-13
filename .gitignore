@@ -1,0 +1,41 @@
+# Ignore object files and binaries
+*.o
+*.exe
+*.out
+
+# Ignore debug and release directories
+/debug/
+/release/
+
+# Ignore build directories
+/build/
+/dist/
+
+# Ignore CMake build files
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+
+# Ignore save files or temporary data
+*.dat
+
+# Ignore Visual Studio Code settings and files
+.vscode/
+
+# Ignore logs, temp files, and system files
+*.log
+*.tmp
+*.swp
+
+# Ignore compiled files
+*.gch
+*.gcda
+*.gcno
+*.gcov
+
+# Ignore backup files
+*~
+
+# Ignore custom user settings or editor files
+.DS_Store
