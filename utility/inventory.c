@@ -4,9 +4,11 @@
 int checkInventory(struct Player *p){
     int option;
     int query = 0;
-    clearScreen();
-    while (1) {
+    int invScrn = 1;
+    
+    while (invScrn == 1) {
         if (query == 0){
+            clearScreen();
             invGraphic();
             printf("\nYou chose to view Inventory.\n");
             printf("\nWhat would you like to do? (1-4):\n");
@@ -27,9 +29,32 @@ int checkInventory(struct Player *p){
             // Clear the input buffer
             while (getchar() != '\n');
         } else {
+            switch (option) {
+                case 1:
+                    clearScreen();
+                    printf("\nItems.\n");
+                    pause(false, 0);
+                    break;
+                case 2:
+                    clearScreen();
+                    printf("\nEquipment.\n");
+                    pause(false, 0);
+                    break;
+                case 3:
+                    clearScreen();
+                    printf("\nCraft.\n");
+                    pause(false, 0);
+                    break;
+                case 4:
+                    clearScreen();
+                    displayPlayer(p);
+                    break;
+                case 5:
+                    invScrn = 0;
+                    break;
+            }
             // Clear the input buffer to remove any leftover characters
             while (getchar() != '\n');
-            break;
         }
     }
     return option;

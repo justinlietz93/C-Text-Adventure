@@ -1,6 +1,10 @@
 #ifndef PLAYER_H
 #define PLAYER_H
 #include "../races/races.h"
+#include "../config.h"
+#include "../utility/utils.h"
+#include "../graphics/graphics.h"
+
 
 // Constants
 #define MAX_HEALTH 10

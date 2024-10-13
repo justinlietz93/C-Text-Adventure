@@ -6,6 +6,7 @@
 #include "player/player.h"
 #include "graphics/graphics.h"
 #include "utility/game_state.h"
+#include "utility/utils.h"
 
 void startGame();
 void setAction(struct Player *p);

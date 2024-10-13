@@ -1,7 +1,5 @@
-#include <stdio.h>
-#include <string.h>
 #include "player.h"
-#include "../races/races.h"
+
 
 
 // Function to create a player
@@ -47,6 +45,7 @@ void createPlayer(struct Player *p) {
 
 // Function to display player details
 void displayPlayer(struct Player *p) {
+    clearScreen();
     printf("\n--- Player Details ---\n");
     printf("Name: %s\n", p->name); // %s is for string
     printf("Age: %d\n", p->age);   // %d is for decimal
@@ -60,6 +59,7 @@ void displayPlayer(struct Player *p) {
     printf("Wisdom: %d\n", p->wis); 
     printf("Magic: %d\n", p->mag); 
 
+    pause(false, 0);
 }
 
 void levelUp(struct Player *p) {

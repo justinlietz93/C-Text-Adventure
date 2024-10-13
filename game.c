@@ -100,10 +100,11 @@ void execAction(int option, struct Player *p) {
     switch (option) {
         case 1:
             printf("\nYou chose to Explore.\n");
-            forestPath(); 
+            pause(false, 0);
             break;
         case 2:
             printf("\nYou chose to Rest.\n");
+            pause(false, 0);
             // rest logic
             break;
         case 3:
